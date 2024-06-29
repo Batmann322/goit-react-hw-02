@@ -1,11 +1,8 @@
-import { useEffect } from "react";
-
-export default function Feedback({ feedback, totalFeedback }) {
-  const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
-  useEffect(() => {
-    localStorage.setItem("feedback", JSON.stringify(feedback));
-  }, [feedback]);
-
+export default function Feedback({
+  feedback,
+  totalFeedback,
+  positiveFeedback,
+}) {
   return (
     <div>
       <p>Good: {feedback.good}</p>
